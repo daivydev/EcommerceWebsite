@@ -2,20 +2,26 @@ import { Link } from "react-router-dom";
 import ImageCarousel from "../../components/CarouselComponent/ImageCarousel";
 import CardCarousel from "../../components/CarouselComponent/CardCarousel";
 import ButtonComponent from "../../components/ButtonComponent/ButtonComponent";
+import SlideWrapper from "../../components/ProductsWrapper/SlideWrapper";
+import BrandWrapper from "../../components/ProductsWrapper/BrandWrapper";
+import CategoriesBar from "../../components/NavbarComponent/CategoriesBar/CategoriesBar";
 
 export default function HomePage() {
-  const category = [
+  const categories = [
     {
       title: "Nhà Sách Tiki",
       img: "https://salt.tikicdn.com/cache/100x100/ts/category/ed/20/60/afa9b3b474bf7ad70f10dd6443211d5f.png.webp",
+      path: "nha-sach-tiki",
     },
     {
       title: "Nhà Cửa - Đời Sống",
       img: "https://salt.tikicdn.com/cache/100x100/ts/category/f6/22/46/7e2185d2cf1bca72d5aeac385a865b2b.png.webp",
+      path: "nha-cua-doi-song",
     },
     {
       title: "Điện Thoại - Máy Tính Bảng",
       img: "https://salt.tikicdn.com/cache/100x100/ts/category/54/c0/ff/fe98a4afa2d3e5142dc8096addc4e40b.png.webp",
+      path: "dien-thoai-may-tinh-bang",
     },
     {
       title: "Đồ Chơi - Mẹ & Bé",
@@ -106,7 +112,8 @@ export default function HomePage() {
       img: "https://salt.tikicdn.com/cache/100x100/ts/product/62/d5/9d/6be83773e4836bcbcdaf99a1750b2a28.png.webp",
     },
   ];
-  const extension = [
+
+  const extensions = [
     {
       title: "Ưu đãi thẻ, ví",
       img: "https://salt.tikicdn.com/cache/100x100/ts/upload/1e/27/a7/e2c0e40b6dc45a3b5b0a8e59e2536f23.png.webp",
@@ -306,12 +313,12 @@ export default function HomePage() {
           <div className="w-[230px] min-w-[230px] max-h-screen sticky overflow-y-scroll no-scrollbar top-4">
             <div className="py-3 px-2 bg-white rounded-lg mb-4">
               <div className="pl-4 mb-2 font-bold text-sm">Danh mục</div>
-              {category.map((item, index) => {
+              {categories.map((item, index) => {
                 return (
                   <div key={index}>
                     <div>
                       <Link
-                        to="/info"
+                        to={`/info/${item.path ? item.path : ""}`}
                         className="flex py-2 px-4 hover:bg-gray-200 duration-300 rounded-lg items-center text-sm"
                       >
                         <div className="flex flex-[0_0_32px] mr-2">
@@ -328,7 +335,7 @@ export default function HomePage() {
             </div>
             <div className="py-3 px-2 bg-white rounded-lg mb-4">
               <div className="pl-4 mb-2 font-bold text-sm">Tiện ích</div>
-              {extension.map((item, index) => {
+              {extensions.map((item, index) => {
                 return (
                   <div key={index}>
                     <div>
@@ -385,28 +392,31 @@ export default function HomePage() {
                 })}
               </div>
             </div>
-            <div className="py-4 px-2 bg-white rounded-lg text-sm">
+            <SlideWrapper>
               <CardCarousel listProduct={listProduct} />
-            </div>
-            <div className="p-4 bg-white rounded-lg text-sm grid grid-cols-6 gap-3">
-              {brandProduct.map((item) => {
+            </SlideWrapper>
+            <BrandWrapper>
+              {brandProduct.map((item, index) => {
                 return (
-                  <div>
+                  <div key={index}>
                     <Link to="/#">
                       <img src={item.image} className="rounded-xl" />
                     </Link>
                   </div>
                 );
               })}
-            </div>
-            <div className="py-4 px-2 bg-white rounded-lg text-sm">
+            </BrandWrapper>
+            <SlideWrapper>
               <CardCarousel listProduct={listProduct} />
-            </div>
-            <div className="py-4 px-2 bg-white rounded-lg text-sm">
+            </SlideWrapper>
+            <SlideWrapper>
               <CardCarousel listProduct={listProduct} />
-            </div>
+            </SlideWrapper>
             <ButtonComponent title={"Xem thêm"} />
           </div>
+        </div>
+        <div className="mt-4">
+          <CategoriesBar />
         </div>
       </div>
     </main>

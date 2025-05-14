@@ -34,10 +34,12 @@ export default function CardProduct({ product }) {
                           "text-base " + (product?.discount !== "0" ? "text-red-400" : "")
                         }
                       >
-                        {(
-                          parseInt(product?.price) *
-                          (1 - parseInt(product?.discount) / 100).toFixed(2)
-                        ).toFixed(0)}
+                        {Intl.NumberFormat("vi-VN").format(
+                          (
+                            parseInt(product?.price) *
+                            (1 - parseInt(product?.discount) / 100).toFixed(2)
+                          ).toFixed(0)
+                        )}
                         <sup>₫</sup>
                       </div>
                     </div>
@@ -48,7 +50,8 @@ export default function CardProduct({ product }) {
                             -{product?.discount}%
                           </div>
                           <div className="original-price line-through text-gray-500 text-[12px]">
-                            {product?.price} <sup>₫</sup>
+                            {Intl.NumberFormat("vi-VN").format(product?.price)}
+                            <sup>₫</sup>
                           </div>
                         </>
                       )}

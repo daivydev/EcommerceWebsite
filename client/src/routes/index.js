@@ -1,5 +1,5 @@
 import HomePage from "../pages/HomePage/HomePage";
-import IntroPage from "../pages/IntroPage/IntroPage";
+import InfoPage from "../pages/InfoPage/InfoPage";
 import NotFoundPage from "../pages/NotFoundPage/NotFoundPage";
 import OrderPage from "../pages/OrderPage/OrderPage";
 import ProductsPage from "../pages/ProductsPage/ProductsPage";
@@ -23,7 +23,7 @@ export const PublicRoutes = [
   },
   {
     path: "/info",
-    page: IntroPage,
+    page: InfoPage,
     isShowHeader: true,
   },
   {
@@ -34,5 +34,6 @@ export const PublicRoutes = [
   {
     path: "*",
     page: NotFoundPage,
+    isShowHeader: true,
   },
 ];
