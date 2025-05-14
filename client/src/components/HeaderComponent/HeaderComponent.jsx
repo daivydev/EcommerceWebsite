@@ -57,7 +57,7 @@ export default function HeaderComponent() {
   }, [counter]);
 
   return (
-    <header>
+    <header className="min-w-[1150px]">
       <div className="z-[999]">
         <Link to="/promotion">
           <div className="bg-green-50 flex justify-center items-center px-4 py-3">

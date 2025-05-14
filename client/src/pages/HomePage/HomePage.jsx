@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import ImageCarousel from "../../components/CarouselComponent/ImageCarousel";
 import CardCarousel from "../../components/CarouselComponent/CardCarousel";
+import ButtonComponent from "../../components/ButtonComponent/ButtonComponent";
 
 export default function HomePage() {
   const category = [
@@ -177,9 +178,9 @@ export default function HomePage() {
       image:
         "https://salt.tikicdn.com/cache/280x280/ts/product/79/97/01/d11e5f7c9f177792c65d8a988be5c291.jpg.webp",
       name: "Xe Máy Honda WINNER X 2024 - Phiên Bản Tiêu Chuẩn",
-      rate: "100",
+      rating: "37",
       price: "10000000",
-      discount: "32",
+      discount: "0",
       deliveryinfo: "Nhận hàng tại cửa hàng",
       onDeal: "1",
       onBrand: "1",
@@ -189,10 +190,10 @@ export default function HomePage() {
       image:
         "https://salt.tikicdn.com/cache/280x280/ts/product/7b/f9/4a/4b800f92958f37c93d5cb959a6c9cc95.jpg.webp",
       name: "Xe Máy Honda WINNER X 2024 - Phiên Bản Tiêu Chuẩn",
-      rate: "100",
+      rating: "60",
       price: "10000000",
-      discount: "32",
-      deliveryinfo: "Nhận hàng tại cửa hàng",
+      discount: "19",
+      deliveryinfo: "Giao thứ 3, 20/05",
       onDeal: "1",
       onBrand: "1",
       onFreeship: "1",
@@ -201,10 +202,10 @@ export default function HomePage() {
       image:
         "https://salt.tikicdn.com/cache/280x280/ts/product/7f/33/33/c082711e8f5a796e43d364437c1bb069.jpg.webp",
       name: "Xe Máy Honda WINNER X 2024 - Phiên Bản Tiêu Chuẩn",
-      rate: "100",
+      rating: "74",
       price: "10000000",
-      discount: "32",
-      deliveryinfo: "Nhận hàng tại cửa hàng",
+      discount: "0",
+      deliveryinfo: "Giao siêu tốc 2h",
       onDeal: "1",
       onBrand: "1",
       onFreeship: "1",
@@ -213,10 +214,10 @@ export default function HomePage() {
       image:
         "https://salt.tikicdn.com/cache/280x280/ts/product/4e/fd/36/216d2930bcbd364f4f02ed751b9db806.jpg.webp",
       name: "Xe Máy Honda WINNER X 2024 - Phiên Bản Tiêu Chuẩn",
-      rate: "100",
+      rating: "20",
       price: "10000000",
-      discount: "32",
-      deliveryinfo: "Nhận hàng tại cửa hàng",
+      discount: "10",
+      deliveryinfo: "Giao chủ nhật, 18/05",
       onDeal: "1",
       onBrand: "1",
       onFreeship: "1",
@@ -224,11 +225,11 @@ export default function HomePage() {
     {
       image:
         "https://salt.tikicdn.com/cache/280x280/ts/product/8d/14/88/cfdaf4bf396100f81c1a602407705c38.jpg.webp",
-      name: "Xe Máy Honda WINNER X 2024 - Phiên Bản Tiêu Chuẩn",
-      rate: "100",
+      name: "Kem dưỡng ẩm sáng da hoa anh đào đảo Jeju innisfree Cherry Blossom Tone Up Cream 50ml",
+      rating: "29",
       price: "10000000",
-      discount: "32",
-      deliveryinfo: "Nhận hàng tại cửa hàng",
+      discount: "21",
+      deliveryinfo: "Giao thứ 2, 19/05",
       onDeal: "1",
       onBrand: "1",
       onFreeship: "1",
@@ -237,9 +238,9 @@ export default function HomePage() {
       image:
         "https://salt.tikicdn.com/cache/280x280/ts/product/ff/56/35/80b0abcaaccada93f3b1fce81a6cf985.jpg.webp",
       name: "Xe Máy Honda WINNER X 2024 - Phiên Bản Tiêu Chuẩn",
-      rate: "100",
+      rating: "100",
       price: "10000000",
-      discount: "32",
+      discount: "90",
       deliveryinfo: "Nhận hàng tại cửa hàng",
       onDeal: "1",
       onBrand: "1",
@@ -247,9 +248,60 @@ export default function HomePage() {
     },
   ];
 
+  const brandProduct = [
+    {
+      image:
+        "https://salt.tikicdn.com/cache/w280/ts/tikimsp/ac/95/c5/d1b58a84d3d481565c1e85695480899d.png.webp",
+    },
+    {
+      image:
+        "https://salt.tikicdn.com/cache/w280/ts/tikimsp/86/b3/92/82d5ebdd52116e9935936e3b895105c1.png.webp",
+    },
+    {
+      image:
+        "https://salt.tikicdn.com/cache/w280/ts/tikimsp/da/c0/ac/94825f9124dd02ca68aa749be8dc6c64.jpg.webp",
+    },
+    {
+      image:
+        "https://salt.tikicdn.com/cache/w280/ts/tikimsp/0b/66/26/c0c370fd2f6b8c2dcc4a4c2f887c5750.png.webp",
+    },
+    {
+      image:
+        "https://salt.tikicdn.com/cache/w280/ts/tikimsp/52/d1/69/ec77e999e76053f3d344a147feb3f998.png.webp",
+    },
+    {
+      image:
+        "https://salt.tikicdn.com/cache/w280/ts/tikimsp/b8/d0/74/7b5d1da7cb533249ef18577c02362431.png.webp",
+    },
+    {
+      image:
+        "https://salt.tikicdn.com/cache/w280/ts/tikimsp/f3/52/95/e46fbe801a63a992651a71d5454fc232.png.webp",
+    },
+    {
+      image:
+        "https://salt.tikicdn.com/cache/w280/ts/tikimsp/72/d8/1f/5b6d87a851e237c57b128777319268fa.png.webp",
+    },
+    {
+      image:
+        "https://salt.tikicdn.com/cache/w280/ts/tikimsp/46/7a/96/d11e7e15bfa45aecbd10dd7c7a642758.png.webp",
+    },
+    {
+      image:
+        "https://salt.tikicdn.com/cache/w280/ts/tikimsp/53/4b/8d/5495aaf35047464d871f582ad1653887.jpg.webp",
+    },
+    {
+      image:
+        "https://salt.tikicdn.com/cache/w280/ts/tikimsp/9a/34/28/d929b8b1586a3e1bba0946d734d1394e.jpg.webp",
+    },
+    {
+      image:
+        "https://salt.tikicdn.com/cache/w280/ts/tikimsp/95/23/47/c4af8a80e4827c092e5c517c2e56abc9.png.webp",
+    },
+  ];
+
   return (
     <main className="bg-gray-100">
-      <div className="px-6 mx-auto w-full 2xl:w-[1440px] pb-32">
+      <div className="px-6 mx-auto w-full 2xl:w-[1440px]">
         <div className="pt-4 flex">
           <div className="w-[230px] min-w-[230px] max-h-screen sticky overflow-y-scroll no-scrollbar top-4">
             <div className="py-3 px-2 bg-white rounded-lg mb-4">
@@ -310,7 +362,7 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
-          <div className="flex flex-col gap-3 ml-4 w-full min-w-[880px]">
+          <div className="flex flex-col gap-3 ml-4 w-full min-w-[880px] justify-center">
             <div className="py-4 px-2 bg-white rounded-lg">
               <ImageCarousel listImage={listBanner} />
             </div>
@@ -336,10 +388,24 @@ export default function HomePage() {
             <div className="py-4 px-2 bg-white rounded-lg text-sm">
               <CardCarousel listProduct={listProduct} />
             </div>
-            <div className="py-4 px-2 bg-white rounded-lg text-sm h-[300px]"></div>
-            <div className="py-4 px-2 bg-white rounded-lg text-sm h-[300px]"></div>
-            <div className="py-4 px-2 bg-white rounded-lg text-sm h-[300px]"></div>
-            <div className="py-4 px-2 bg-white rounded-lg text-sm h-[300px]"></div>
+            <div className="p-4 bg-white rounded-lg text-sm grid grid-cols-6 gap-3">
+              {brandProduct.map((item) => {
+                return (
+                  <div>
+                    <Link to="/#">
+                      <img src={item.image} className="rounded-xl" />
+                    </Link>
+                  </div>
+                );
+              })}
+            </div>
+            <div className="py-4 px-2 bg-white rounded-lg text-sm">
+              <CardCarousel listProduct={listProduct} />
+            </div>
+            <div className="py-4 px-2 bg-white rounded-lg text-sm">
+              <CardCarousel listProduct={listProduct} />
+            </div>
+            <ButtonComponent title={"Xem thêm"} />
           </div>
         </div>
       </div>
